@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUNDNUT Disease Classifier</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center">
+            <h1>GROUNDNUT Disease Classifier</h1>
+        </header>
+        <main>
+            <form method="POST" enctype="multipart/form-data" action="{{ url_for('main') }}" class="text-center">
+                <div class="custom-file">
+                    <input type="file" id="image-upload" name="image" accept=".jpg, .jpeg, .png" class="custom-file-input" required>
+                    <label for="image-upload" id="image-label" class="custom-file-label" style="background-color: lightcoral; color: black;">
+                        <i class="fas fa-cloud-upload-alt"></i> Choose an Image
+                    </label>
+                </div>
+                <div id="upload-message" class="mt-3" style="display: none;">Image uploaded!</div>
+                <button type="button" onclick="uploadImage()" class="btn btn-success mt-3">Classify</button>
+                <div id="upload-progress" class="progress mt-3" style="display: none;">
+                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </form>
+
+            {% if prediction %}
+                <div id="prediction" class="text-center mt-4">
+                    <h2>Prediction: {{ prediction }}</h2>
+                    <p>Confidence: {{ confidence }}%</p>
+                    <img src="{{ img_path }}" alt="Uploaded Image" class="result_image img-fluid" style="max-width: 40%;">
+                </div>
+            {% endif %}
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('image-upload').addEventListener('change', function() {
+            var label = document.getElementById('image-label');
+            if (this.files.length > 0) {
+                label.style.backgroundColor = 'lightgreen'; // Change background color to sky blue
+            } else {
+                label.style.backgroundColor = 'lightcoral'; // Reset background color if no file is selected
+            }
+        });
+
+        function uploadImage() {
+            var progressBar = document.getElementById('progress-bar');
+            var uploadProgress = document.getElementById('upload-progress');
+            var uploadMessage = document.getElementById('upload-message');
+
+            uploadMessage.style.display = 'block';
+            progressBar.style.width = '0%';
+            uploadProgress.style.display = 'block';
+
+            var interval = setInterval(function() {
+                var width = parseInt(progressBar.style.width, 10);
+                if (width < 100) {
+                    progressBar.style.width = (width + 10) + '%';
+                } else {
+                    clearInterval(interval);
+                    uploadProgress.style.display = 'none';
+                    // Continue with the actual form submission
+                    document.forms[0].submit();
+                }
+            }, 200);
+        }
+    </script>
+
+</body>
+</html>
