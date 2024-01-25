@@ -88,19 +88,23 @@ def load_custom_model():
 def predict_label(img_path):
     load_custom_model()
     try:
+        st.write("Image Path:", img_path)
+        st.write("Class Names:", class_names)
 
         # Load and preprocess the image
         test_image = image.load_img(img_path, target_size = (224, 224))
         test_image = image.img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis = 0)
 
+        st.write("Image Shape:", test_image.shape)
 
         # Make predictions
         predictions = model.predict(test_image)
+        st.write("Raw Predictions:", predictions)
 
         # Post-process the predictions
         result = predictions.flatten()
-
+        st.write(result)
 
         index = result.argmax()
         confidence = round(result[index] * 100, 2)
@@ -123,9 +127,9 @@ def main():
         st.write("")
         st.write("Classifying...")
 
-        img_path = os.path.join("static/images", uploaded_file.name)
-        with open(img_path, "wb") as f:
-            f.write(uploaded_file.getbuffer())
+        # Process the image directly from the uploaded file without saving it
+        content = uploaded_file.getvalue()
+        img_path = process_uploaded_file(content)
 
         predicted_class, confidence = predict_label(img_path)
 
@@ -134,6 +138,13 @@ def main():
         st.image(img_path, caption = "Classified Image", use_column_width = True)
 
 
+def process_uploaded_file(content):
+    # Create a temporary file to write the uploaded content
+    with st.tempfile.NamedTemporaryFile(delete = False, suffix = ".jpg") as temp_file:
+        temp_file.write(content)
+
+    return temp_file.name
+
+
 if __name__ == '__main__':
-    os.makedirs("static", exist_ok = True)
     main()
