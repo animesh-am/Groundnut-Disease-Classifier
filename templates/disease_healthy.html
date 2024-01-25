@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Groundnut</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
+    <style>
+        /* Additional styles for the disease information */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        #disease-info {
+            text-align: left;
+        }
+
+        #disease-info img {
+            max-width: 40%;
+            float: right;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .management-title {
+            font-size: 24px;
+            color: #ff9800;
+            margin-top: 20px;
+        }
+
+        .management-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .symptom-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .symptom-list li:before {
+            content: '\204D';
+            color: #4caf50;
+            font-size: 24px;
+            margin-right: 10px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Healthy Groundnut</h1>
+        </header>
+        <main>
+            <div id="disease-info" class="mt-4">
+                <img src="/static/Healthy__Test (1).jpg" alt="Healthy Groundnut Image" class="img-fluid" style="max-width: 30%;">
+
+                <h2>Application of Micronutrients</h2>
+                <ul class="symptom-list">
+                    <li>Mix 12.5 kg/ha of micronutrient mixture developed by the Department of Agriculture with enough dry sand to make a total quantity of 50 kg/ha.</li>
+                    <li>Broadcast evenly on the soil surface immediately after sowing.</li>
+                    <li>Do not incorporate micronutrient mixture into the soil.</li>
+                </ul>
+
+                <h2>Nutritional Disorder</h2>
+                <p class="management-title">Zinc deficiency:</p>
+                <ul class="symptom-list">
+                    <li>If soil analysis shows less than 1.3 ppm of zinc, soil application of 25 kg <a href="https://www.google.com/search?q=ZnSO4" target="_blank">ZnSO4</a> is recommended.</li>
+                    <li>Reduce<a href="https://www.google.com/search?q=ZnSO4" target="_blank">ZnSO4</a> application from 25.0 kg ha-1 to 12.5 kg ha-1 if FYM is applied @ 12.5 t ha-1.</li>
+                    <li>For the standing crop, less than 39.4 ppm of zinc in leaves, foliar spray of 0.5% <a href="https://www.google.com/search?q=ZnSO4" target="_blank">ZnSO4</a> is recommended.</li>
+                </ul>
+
+                <p class="management-title">Iron deficiency:</p>
+                <ul class="symptom-list">
+                    <li>Spray 1% <a href="https://www.google.com/search?q=FeSO4" target="_blank">FeSO4</a> on 30, 40, and 50 days after sowing.</li>
+                </ul>
+
+                <p class="management-title">Boron deficiency:</p>
+                <ul class="symptom-list">
+                    <li>Apply <a href="https://www.google.com/search?q=Borax" target="_blank">Borax</a> 10 kg + <a href="https://www.google.com/search?q=Gypsum" target="_blank">Gypsum</a> 400 kg/ha at the 45th day after sowing.</li>
+                </ul>
+
+                <h2>Seed Treatment</h2>
+                <p class="management-description">
+                    Treat the seeds with 3 packets (600 g/ha) of Rhizobial culture <a href="https://www.google.com/search?q=TNAU+14" target="_blank">TNAU 14</a> + 3 packets of Azospirillum (600 g/ha) and 3 packets (600 g/ha) of Phosphobacteria or 6 packets of Azophos (1200 g/ha) developed at <a href="https://www.google.com/search?q=TNAU" target="_blank">TNAU</a> using rice kanji as a binder.
+                </p>
+                <p class="management-description">
+                    If the seed treatment is not carried out, apply 10 packets of Rhizobium (2000g/ha) + 10 packets of Azospirillum (2000 g/ha) and 10 packets (2000 g) of Phosphobacteria with 25 kg of FYM and 25 kg of soil before sowing.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

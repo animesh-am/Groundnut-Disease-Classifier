@@ -32,14 +32,18 @@
                     <h2>Prediction: {{ prediction }}</h2>
                     <p>Confidence: {{ confidence }}%</p>
                     <img src="{{ img_path }}" alt="Uploaded Image" class="result_image img-fluid" style="max-width: 40%;">
+                    <br>
+                    <a href="{{ url_for('disease_page', disease=prediction.lower()) }}" class="btn btn-info mt-3">Learn More</a>
                 </div>
             {% endif %}
         </main>
     </div>
 
     <footer class="text-center mt-5">
+        <p>Created by <a href="https://github.com/animesh-am" target="_blank">Animesh Maity</a></p>
         <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
     </footer>
+
 
     <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

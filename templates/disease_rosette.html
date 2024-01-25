@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundnut Rosette Disease</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
+    <style>
+        /* Additional styles for the disease information */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        #disease-info {
+            text-align: left;
+        }
+
+        #disease-info img {
+            max-width: 40%;
+            float: right;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .management-title {
+            font-size: 24px;
+            color: #ff9800;
+            margin-top: 20px;
+        }
+
+        .management-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .symptom-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .symptom-list li:before {
+            content: '\204D';
+            color: #4caf50;
+            font-size: 24px;
+            margin-right: 10px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Groundnut Rosette Disease</h1>
+        </header>
+        <main>
+            <div id="disease-info" class="mt-4">
+                <!-- Include an image related to Groundnut Rosette Disease -->
+                <img src="/static/Rosette__Test (7).jpg" alt="Groundnut Rosette Disease Image" class="img-fluid" style="max-width: 30%;">
+
+                <h2>Symptoms</h2>
+                <ul class="symptom-list">
+                    <li>The affected plants are characterized by the appearance of dense clump or dwarf shoots with tuft of small leaves forming in a rosette fashion.</li>
+                    <li>The plant exhibits chlorosis and mosaic mottling.</li>
+                    <li>The infected plants remain stunted and produce flowers, but only a few of the pegs may develop further to nuts but no seed formation.</li>
+                </ul>
+
+                <h2>Pathogen</h2>
+                <p class="management-description">
+                    The disease is caused by a complex mixture of viruses viz., <a href="https://www.google.com/search?q=Groundnut+Rosette+Assistor+Virus+%28GRAV%29" target="_blank">Groundnut Rosette Assistor Virus (GRAV)</a>, <a href="https://www.google.com/search?q=Groundnut+Rosette+Virus" target="_blank">Groundnut Rosette Virus</a>, and Groundnut Rosette Satellites. It is an isometric, not enveloped virus with a 28nm diameter (reported from India) and gives no overt symptoms in groundnut. Groundnut Rosette Virus is with ssRNA genome, which becomes packaged in GRAV virions and thus depends on it for aphid transmission, but produces no overt symptoms in groundnut. The Groundnut Rosette Satellites are satellite RNAs that control the symptoms and cause different types of rosette (chlorotic, green, and mosaic).
+                </p>
+
+                <h2>Disease Cycle</h2>
+                <p class="management-description">
+                    The primary source of spread is by aphid vectors, <a href="https://www.google.com/search?q=Aphis+craccivora" target="_blank">Aphis craccivora</a> and A. gossipii, in a persistent manner, retained by the vector but not transmitted congenitally. The virus is not transmitted by any other means like mechanical or seed or pollen. The virus can survive on the volunteer plants of groundnut and other weed hosts.
+                </p>
+
+                <h2>Management</h2>
+                <ul class="symptom-list">
+                    <li>Practice clean cultivation.</li>
+                    <li>Use heavy seed rate and rogue out the infected plants periodically.</li>
+                    <li>Spray <a href="https://www.google.com/search?q=Monocrotophos" target="_blank">Monocrotophos</a> or <a href="https://www.google.com/search?q=Methyl+demeton" target="_blank">Methyl demeton</a> at 500 ml/ha.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternaria Leafspot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
+    <style>
+        /* Additional styles for the disease information */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        #disease-info {
+            text-align: left;
+        }
+
+        #disease-info img {
+            max-width: 100%;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .symptom-title {
+            font-size: 24px;
+            color: #4caf50;
+            margin-top: 10px;
+        }
+
+        .symptom-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .management-title {
+            font-size: 24px;
+            color: #ff9800;
+            margin-top: 20px;
+        }
+
+        .management-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Alternaria Leafspot</h1>
+        </header>
+        <main>
+            <div id="disease-info" class="mt-4">
+                <img src="/static/Alternaria__Test (4).jpg" alt="Alternaria Leafspot Image" class="img-fluid" style="max-width: 40%;">
+                <h2>Symptoms</h2>
+                <div class="symptom-title">Symptoms caused by A. arachidis:</div>
+                <p class="symptom-description">
+                    Lesions produced by A. arachidis are brown in color and irregular in shape surrounded by yellowish halos.
+                </p>
+                <div class="symptom-title">Symptoms caused by A. tenuissima:</div>
+                <p class="symptom-description">
+                    Symptoms produced by A. tenuissima are characterized by blighting of apical portions of leaflets which turn
+                    light to dark brown color. In the later stages of infection, blighted leaves curl inward and become brittle.
+                </p>
+
+                <h2>Management</h2>
+                <p class="management-title">Foliar application of:</p>
+                <p class="management-description">
+                    <a href="https://www.google.com/search?q=Mancozeb">Mancozeb (0.3%)</a> or
+                    <a href="https://www.google.com/search?q=Copper+oxychloride">Copper oxychloride (0.3%)</a> or
+                    <a href="https://www.google.com/search?q=Carbendazim">Carbendazim(0.1%)</a>
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

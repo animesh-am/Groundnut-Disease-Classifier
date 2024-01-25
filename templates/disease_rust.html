@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundnut Rust Disease</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
+    <style>
+        /* Additional styles for the disease information */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        #disease-info {
+            text-align: left;
+        }
+
+        #disease-info img {
+            max-width: 40%;
+            float: right;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .management-title {
+            font-size: 24px;
+            color: #ff9800;
+            margin-top: 20px;
+        }
+
+        .management-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+            margin: 0 3px;
+        }
+
+        .symptom-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .symptom-list li:before {
+            content: '\204D';
+            color: #4caf50;
+            font-size: 24px;
+            margin-right: 10px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Groundnut Rust Disease</h1>
+        </header>
+        <main>
+            <div id="disease-info" class="mt-4">
+                <img src="/static/Rust__Test (8).jpg" alt="Groundnut Rust Disease Image" class="img-fluid" style="max-width: 30%;">
+
+                <h2>Symptoms</h2>
+                <ul class="symptom-list">
+                    <li>The disease attacks all aerial parts of the plant.</li>
+                    <li>The disease is usually found when the plants are about 6 weeks old</li>
+                    <li>Small brown to chestnut dusty pustules <a href="https://www.google.com/search?q=uredosori" target="_blank">(uredosori)</a> appear on the lower surface of leaves.</li>
+                    <li>In severe infection lower leaves dry and drop prematurely.</li>
+                    <li>The severe infection leads to the production of small and shriveled seeds.</li>
+                </ul>
+
+                <h2>Pathogen</h2>
+                <p class="management-description">
+                    The pathogen produces both <a href="https://www.google.com/search?q=uredial" target="_blank">uredial</a> and <a href="https://www.google.com/search?q=telial" target="_blank">telial</a> stages. <a href="https://www.google.com/search?q=Uredospores" target="_blank">Uredospores</a> are <a href="https://www.google.com/search?q=pedicellate" target="_blank">pedicellate</a>, unicellular, yellow, oval or round and echinulated with 2 or 3 germpores. Teliospores are dark brown with two cells. Pycnial and aecial stages have not been recorded, and there is no information available about the role of alternate hosts.
+                </p>
+
+                <h2>Favourable Conditions</h2>
+                <ul class="symptom-list">
+                    <li>High relative humidity (above 85 per cent).</li>
+                    <li>Heavy rainfall.</li>
+                    <li>Low temperature (20-25˚C).</li>
+                </ul>
+
+                <h2>Disease Cycle</h2>
+                <p class="management-description">
+                    The pathogen survives as uredospores on volunteer groundnut plants. The fungus also survives in infected plant debris in the soil. The spread is mainly through wind-borne inoculum of uredospores. The uredospores also spread as contamination of seeds and pods. Rain splash and implements also help in dissemination. The fungus also survives on collateral hosts like <a href="https://www.google.com/search?q=Arachis+marginata" target="_blank">Arachis marginata</a>, <a href="https://www.google.com/search?q=A.+nambyquarae" target="_blank">A. nambyquarae</a>, and <a href="https://www.google.com/search?q=A.+prostrate" target="_blank">A. prostrate</a>.
+                </p>
+
+                <h2>Management</h2>
+                <ul class="symptom-list">
+                    <li>Avoid monoculturing of groundnut.</li>
+                    <li>Remove volunteer groundnut plants and reservoir hosts.</li>
+                    <li>Spray <a href="https://www.google.com/search?q=mancozeb" target="_blank">mancozeb</a> 2 kg or <a href="https://www.google.com/search?q=Wettable+Sulphur" target="_blank">Wettable Sulphur</a> 3 kg or <a href="https://www.google.com/search?q=Tridemorph" target="_blank">Tridemorph</a> 500ml or <a href="https://www.google.com/search?q=Chlorothalonil" target="_blank">Chlorothalonil</a> 2 kg/ha.</li>
+                    <li>Grow moderately resistant varieties like <a href="https://www.google.com/search?q=ALR+1" target="_blank">ALR 1</a>.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

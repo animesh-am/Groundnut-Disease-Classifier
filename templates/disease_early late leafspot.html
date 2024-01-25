@@ -1,0 +1,123 @@
+<!-- early_late_leafspot.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Late Leafspot</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
+    <style>
+        /* Additional styles for the disease information */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        #disease-info {
+            text-align: left;
+        }
+
+        #disease-info img {
+            max-width: 40%;
+            float: right;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .management-title {
+            font-size: 24px;
+            color: #ff9800;
+            margin-top: 20px;
+        }
+
+        .management-description {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .symptom-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .symptom-list li:before {
+            content: '\204D';
+            color: #4caf50;
+            font-size: 24px;
+            margin-right: 10px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>Early Late Leafspot</h1>
+        </header>
+        <main>
+            <div id="disease-info" class="mt-4">
+                <img src="/static/Leaf__Spot__Test (1).jpg" alt="Alternaria Leafspot Image" class="img-fluid" style="max-width: 30%;">
+
+                <h2>Symptoms</h2>
+                <ul class="symptom-list">
+                    <li>Infection starts about a month after sowing.</li>
+                    <li>Small chlorotic spots appear on leaflets, with time they enlarge and turn brown to black and assume sub-circular shape on the upper leaf surface.</li>
+                    <li>On the lower surface of leaves, light brown coloration is seen.</li>
+                    <li>Lesions also appear on petioles, stems, stipules.</li>
+                    <li>In severe cases, several lesions coalesce and result in premature senescence.</li>
+                </ul>
+
+                <h2>Management</h2>
+                <p class="management-title">Spray any one of the following:</p>
+                <p class="management-description">
+                    <a href="https://www.google.com/search?q=Carbendazim">Carbendazim 500 g/ha</a> or
+                    <a href="https://www.google.com/search?q=Mancozeb">Mancozeb 1000 g/ha</a> or
+                    <a href="https://www.google.com/search?q=Chlorothalonil">Chlorothalonil 1000 g/ha</a>
+                </p>
+                <p class="management-description">
+                    <a href="https://www.google.com/search?q=Calotropis+leaf+extract">Spray 10% Calotropis leaf extract</a> or
+                    <a href="https://www.google.com/search?q=Carbendazim">Spray Carbendazim 250 g + Mancozeb 1000g/ha</a> or
+                    <a href="https://www.google.com/search?q=Chlorothalonil">Chlorothalonil 1000g/ha</a>.
+                    <p>If necessary, give the second round 15 days later.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/c4c27a2a61.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
