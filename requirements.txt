@@ -3,3 +3,4 @@ flask~=3.0.1
 keras~=2.15.0
 Flask
 Gunicorn
+tensorflow
