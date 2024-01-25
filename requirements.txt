@@ -1,2 +1,5 @@
+numpy~=1.26.3
+flask~=3.0.1
+keras~=2.15.0
 Flask
 Gunicorn
