@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GROUNDNUT Disease Classifier</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+
     <style>
         body {
-            background-color: #f8f9fa;
+            background-color: #bed9a3;
         }
 
         .container {
@@ -105,7 +105,7 @@
                 <div class="custom-file">
                     <input type="file" id="image-upload" name="image" accept=".jpg, .jpeg, .png" class="custom-file-input" required>
                     <label for="image-upload" id="image-label" class="custom-file-label">
-                        <i class="fas fa-cloud-upload-alt"></i> Choose an Image
+                        <i class="fas fa-cloud-upload-alt"></i> Capture an Image
                     </label>
                 </div>
                 <div id="upload-message" class="mt-3">Image uploaded!</div>
@@ -129,7 +129,8 @@
     </div>
 
     <footer>
-        <p>Created by <a href="https://github.com/animesh-am" target="_blank" style="color: #007bff;">Animesh Maity</a></p>
+        <p>Created with ❤♥ by <a href="https://github.com/animesh-am" target="_blank" style="color: #007bff;">Animesh Maity</a> and <a href="https://github.com/swarup-2002" target="_blank" style="color: #007bff;">Swarup Kumar Bhunia</a> </p>
+        <p><a href="mailto:animesh.maity.iam@gmail.com" target="_blank" style="color: darkgreen;">animesh.maity.iam@gmail.com</a></p>
         <p>&copy; 2024 GROUNDNUT Disease Classifier</p>
     </footer>
 
@@ -148,6 +149,12 @@
         });
 
         function uploadImage() {
+            var fileInput = document.getElementById('image-upload');
+            if (fileInput.files.length === 0) {
+                alert('No image selected. Please choose an image before searching for disease.');
+                return;
+            }
+
             var progressBar = document.getElementById('progress-bar');
             var uploadProgress = document.getElementById('upload-progress');
             var uploadMessage = document.getElementById('upload-message');
@@ -169,5 +176,9 @@
             }, 200);
         }
     </script>
+
+
+
+
 </body>
 </html>

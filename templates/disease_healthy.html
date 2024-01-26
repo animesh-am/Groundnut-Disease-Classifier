@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Healthy Groundnut</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
     <style>
-        /* Additional styles for the disease information */
         body {
             background-color: #f8f9fa;
         }
@@ -26,22 +24,19 @@
         }
 
         #disease-info img {
-            max-width: 40%;
+            max-width: 50%;
             float: right;
             margin-left: 20px;
+            margin-bottom: 5px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        .management-title {
-            font-size: 24px;
-            color: #ff9800;
-            margin-top: 20px;
-        }
-
+        .symptom-title,
+        .symptom-description,
+        .management-title,
         .management-description {
-            font-size: 16px;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         a {
@@ -55,9 +50,6 @@
         }
 
         .symptom-list li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 10px;
             font-size: 16px;
             color: #333;
             line-height: 1.6;
@@ -70,6 +62,18 @@
             margin-right: 10px;
             margin-bottom: -15px;
             margin-top: -5px;
+        }
+
+        @media (max-width: 768px) {
+            #disease-info img {
+                max-width: 100%;
+                float: center;
+                margin-left: 0;
+            }
+
+            .symptom-list li {
+                font-size: 14px;
+            }
         }
     </style>
 </head>

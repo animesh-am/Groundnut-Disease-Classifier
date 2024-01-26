@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternaria Leafspot</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='disease_styles.css') }}">
     <style>
-        /* Additional styles for the disease information */
         body {
             background-color: #f8f9fa;
         }
@@ -26,39 +24,56 @@
         }
 
         #disease-info img {
-            max-width: 100%;
-            height: auto;
+            max-width: 50%;
             float: right;
             margin-left: 20px;
+            margin-bottom: 5px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
-        .symptom-title {
-            font-size: 24px;
-            color: #4caf50;
-            margin-top: 10px;
-        }
-
-        .symptom-description {
-            font-size: 16px;
-            margin-top: 5px;
-        }
-
-        .management-title {
-            font-size: 24px;
-            color: #ff9800;
-            margin-top: 20px;
-        }
-
+        .symptom-title,
+        .symptom-description,
+        .management-title,
         .management-description {
-            font-size: 16px;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         a {
             color: #007bff;
             text-decoration: underline;
+        }
+
+        .symptom-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .symptom-list li:before {
+            content: '\204D';
+            color: #4caf50;
+            font-size: 24px;
+            margin-right: 10px;
+            margin-bottom: -15px;
+            margin-top: -5px;
+        }
+
+        @media (max-width: 768px) {
+            #disease-info img {
+                max-width: 100%;
+                float: center;
+                margin-left: 30px;
+            }
+
+            .symptom-list li {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -70,7 +85,7 @@
         </header>
         <main>
             <div id="disease-info" class="mt-4">
-                <img src="/static/Alternaria__Test (4).jpg" alt="Alternaria Leafspot Image" class="img-fluid" style="max-width: 40%;">
+                <img src="/static/Alternaria__Test (4).jpg" alt="Alternaria Leafspot Image" class="img-fluid" style="scale:40%">
                 <h2>Symptoms</h2>
                 <div class="symptom-title">Symptoms caused by A. arachidis:</div>
                 <p class="symptom-description">

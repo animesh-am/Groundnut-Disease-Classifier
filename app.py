@@ -1,14 +1,26 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash, redirect
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 import os
+from flask_ngrok3 import run_with_ngrok
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+
+run_with_ngrok(app)
 
 model = None  # Initialize model (loaded later)
 class_names = ['Alternaria Leafspot', 'Early Late Leafspot', 'Healthy',
                'Rosette', 'Rust']
+
+app.config['UPLOAD_FOLDER'] = 'static/images/'
+# Allow only specific file types
+app.config['ALLOWED_EXTENSIONS'] = {'png', 'jpg', 'jpeg'}
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 
 
 def load_custom_model():
@@ -53,12 +65,26 @@ def predict_label(img_path):
 @app.route("/", methods = ['GET', 'POST'])
 def main():
     if request.method == 'POST':
-        img = request.files['image']
-        img_path = "static/images/" + img.filename
-        img.save(img_path)
+        if 'image' not in request.files:
+            flash('No image selected')
+            return redirect(request.url)
 
-        predicted_class, confidence = predict_label(img_path)
-        return render_template('index.html', prediction = predicted_class, confidence = confidence, img_path = img_path)
+        img = request.files['image']
+
+        if img.filename == '':
+            flash('No image selected')
+            return redirect(request.url)
+
+        if img and allowed_file(img.filename):
+            # Secure the filename to prevent malicious attacks
+            filename = secure_filename(img.filename)
+
+            # Save the file only if it's selected
+            img_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            img.save(img_path)
+
+            predicted_class, confidence = predict_label(img_path)
+            return render_template('index.html', prediction = predicted_class, confidence = confidence, img_path = img_path)
 
     return render_template('index.html', prediction = None, confidence = None, img_path = None)
 
@@ -72,4 +98,4 @@ def disease_page(disease):
 
 if __name__ == '__main__':
     os.makedirs("static", exist_ok = True)
-    app.run(debug = True)
+    app.run()
