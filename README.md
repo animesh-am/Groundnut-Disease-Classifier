@@ -36,7 +36,7 @@ This is a simple web application that classifies groundnut diseases based on ima
 
 ## Contributing
 If you'd like to contribute to the project, please follow the standard GitHub flow:
-
+```bash
 Fork the repository.
 Create a new branch: git checkout -b feature/your-feature.
 Make your changes and commit them: git commit -m 'Add your feature'.
