@@ -22,3 +22,21 @@ This is a simple web application that classifies groundnut diseases based on ima
    ```bash
    git clone https://github.com/yourusername/groundnut-disease-classifier.git
    cd groundnut-disease-classifier
+
+## 1.Install Dependencies
+   pip install -r requirements.txt
+
+## 2. Run the application
+   python app.py
+   
+## 3. Open in browser
+   Open your web browser and go to http://localhost:5000 to access the application.
+
+## Contributing
+If you'd like to contribute to the project, please follow the standard GitHub flow:
+
+Fork the repository.
+Create a new branch: git checkout -b feature/your-feature.
+Make your changes and commit them: git commit -m 'Add your feature'.
+Push to the branch: git push origin feature/your-feature.
+Submit a pull request.
