@@ -23,10 +23,12 @@ This is a simple web application that classifies groundnut diseases based on ima
    git clone https://github.com/yourusername/groundnut-disease-classifier.git
    cd groundnut-disease-classifier
 
-## 1.Install Dependencies
+## Install Dependencies
+   ```bash
    pip install -r requirements.txt
 
 ## 2. Run the application
+   ```bash
    python app.py
    
 ## 3. Open in browser
