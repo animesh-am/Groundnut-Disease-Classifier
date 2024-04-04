@@ -4,6 +4,13 @@
 
 This is a simple web application that classifies groundnut diseases based on images uploaded by users. It uses a machine learning model to make predictions about the type of disease affecting the groundnut plant.
 
+![screencapture-127-0-0-1-5000-2024-04-04-22_00_43](https://github.com/animesh-am/Groundnut-Disease-Classifier/assets/115914707/307ae2b3-b3f0-4f65-96b9-4e6d62afe3c3)
+
+![screencapture-127-0-0-1-5000-2024-04-04-22_04_17](https://github.com/animesh-am/Groundnut-Disease-Classifier/assets/115914707/60df18ef-2113-4eeb-944f-6bf97f1b1a24)
+
+![screencapture-127-0-0-1-5000-disease-early-late-leafspot-2024-04-04-22_06_16](https://github.com/animesh-am/Groundnut-Disease-Classifier/assets/115914707/b0b68e76-afba-46cb-ba45-6384dffe1478)
+
+
 ## Features
 
 - **Image Upload:** Users can upload images of groundnut plants to the application.
